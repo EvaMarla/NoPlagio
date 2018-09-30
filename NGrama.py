@@ -12,7 +12,7 @@ class NGrama:
     return " ".join(self.__words)
 
   def __repr__(self):
-    return "{0},{1},{2}".format(self.__class__.__name__,'(', self.__size, tuple(self.__words), ')')
+    return "{0}({1}, {2})".format(self.__class__.__name__, self.__size, tuple(self.__words))
   
   def setWords(self, words):
     if(self.__size != len(words)):
@@ -23,4 +23,4 @@ class NGrama:
 test = NGrama(2)
 test.setWords(('cute', 'watermelon'))
 print(test)
- print(test.__repr__())
+print(test.__repr__())
